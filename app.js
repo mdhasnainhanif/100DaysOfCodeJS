@@ -102,7 +102,7 @@ let unSortArray = [5, 3, 2, 7, 1, 4, 8, 9];
 let temp;
 
 for (let i = 0; i < unSortArray.length; i++) {
-  for (let j = 1 + i; j < array.length; j++) {
+  for (let j = 1 + i; j < unSortArray.length; j++) {
     if (unSortArray[i] > unSortArray[j]) {
       temp = unSortArray[i];
       unSortArray[i] = unSortArray[j]
@@ -115,7 +115,7 @@ document.write(`Question 8: Sorted array is [${unSortArray}]` + "<br>");
 
 // 15. Question: Determine if a year is a leap year or not.
 
-var year = +prompt("Year")
+var year = 2024
 
 if (year % 4 === 0) {
   console.log('Yes' + year + ` is a leap year`);
