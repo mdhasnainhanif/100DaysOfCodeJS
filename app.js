@@ -113,17 +113,6 @@ for (let i = 0; i < unSortArray.length; i++) {
 document.write(`Question 8: Sorted array is [${unSortArray}]` + "<br>");
 
 
-// 15. Question: Determine if a year is a leap year or not.
-
-var year = 2024
-
-if (year % 4 === 0) {
-  console.log('Yes' + year + ` is a leap year`);
-} else {
-  console.log('No' + `${year} is Not leap year`);
-}
-
-
 // 13. Question: Check if a number is even or odd and return a corresponding message.
 
 
@@ -137,3 +126,27 @@ for (let i = 1; i <= 20; i++) {
 
 
 
+// 15. Question: Determine if a year is a leap year or not.
+
+var year = 2024
+
+if (year % 4 === 0) {
+  console.log('Yes' + year + ` is a leap year`);
+} else {
+  console.log('No' + `${year} is Not leap year`);
+}
+
+
+
+// 1. Rewrite the following code using a ternary operator:
+// let result;
+// if (score >= 80) {
+//     result = "Pass";
+// } else {
+//     result = "Fail";
+// }
+
+
+let marks = 70;
+marks >= 80 ? marks = "pass" : marks = "fail" 
+console.log(marks);
