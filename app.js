@@ -1,116 +1,116 @@
 // 1. Question: Reverse a string without using the built-in reverse() method.
 
-let str = "reverse"
-for (let i = str.length - 1; i >= 0; i--) {
-  document.write(str[i]);
-}
+// let str = "reverse"
+// for (let i = str.length - 1; i >= 0; i--) {
+//   document.write(str[i]);
+// }
 
-document.write('<br/>')
+// document.write('<br/>')
 
 // 2. Question: Count the number of vowels in a given string.
 
-var vowels = ["a", "e", "i", "o", "u"];
-let result = [];
-let vowelSentence = "Hasnain"
+// var vowels = ["a", "e", "i", "o", "u"];
+// let result = [];
+// let vowelSentence = "Hasnain"
 
 
-for (let character of [...vowelSentence]) {
-  if (vowels.includes(character)) {
-    result.push(character)
-  }
-}
-document.write("In " + vowelSentence + " These are Vowels " + result)
+// for (let character of [...vowelSentence]) {
+//   if (vowels.includes(character)) {
+//     result.push(character)
+//   }
+// }
+// document.write("In " + vowelSentence + " These are Vowels " + result)
 
-document.write('<br/>')
+// document.write('<br/>')
 
 // 3. Question: Convert the first letter of each word in a sentence to uppercase.
 
-var sentence = "this is a sentence";
-var arrSentence = sentence.split(" ");
-var uppSentence = "";
+// var sentence = "this is a sentence";
+// var arrSentence = sentence.split(" ");
+// var uppSentence = "";
 
-for (let i of arrSentence) {
-  uppSentence += i.slice(0, 1).toLocaleUpperCase() + i.slice(1) + " ";
-}
-document.write(uppSentence);
+// for (let i of arrSentence) {
+//   uppSentence += i.slice(0, 1).toLocaleUpperCase() + i.slice(1) + " ";
+// }
+// document.write(uppSentence);
 
 
 // 4. Question: Check if a string is a palindrome.
 
-var palindrome = "civic"
+// var palindrome = "civic"
 
-var revertPalindrome = palindrome.split("").reverse().join("")
-if (palindrome == revertPalindrome) {
-  document.write(revertPalindrome + " word is palindrome")
-} else {
-  document.write(palindrome + " word is tot palindrome")
-}
+// var revertPalindrome = palindrome.split("").reverse().join("")
+// if (palindrome == revertPalindrome) {
+//   document.write(revertPalindrome + " word is palindrome")
+// } else {
+//   document.write(palindrome + " word is tot palindrome")
+// }
 
 
 // 5. Question: Find the sum of all positive numbers in an array.
 
 
-let sum = [1, -5, 6, 3, -6, 37, -2]
-let positiveInt = 0;
-for (let i = 0; i < sum.length; i++) {
-  if (sum[i] > 0) {
-    positiveInt += sum[i]
-  }
-}
-document.write("These are positive integers ", positiveInt + "<br/>");
+// let sum = [1, -5, 6, 3, -6, 37, -2]
+// let positiveInt = 0;
+// for (let i = 0; i < sum.length; i++) {
+//   if (sum[i] > 0) {
+//     positiveInt += sum[i]
+//   }
+// }
+// document.write("These are positive integers ", positiveInt + "<br/>");
 
 
 // 6. Question: Find the index of the first occurrence of a specific element in an array.
 
-let myArray = [1, 5, 77, 3, 6, 37, 2]
-let num = 2;
-let index;
+// let myArray = [1, 5, 77, 3, 6, 37, 2]
+// let num = 2;
+// let index;
 
-for (index = 0; index < myArray.length; index++) {
-  if (myArray[index] == num) {
-    console.log(index);
-  }
-}
+// for (index = 0; index < myArray.length; index++) {
+//   if (myArray[index] == num) {
+//     console.log(index);
+//   }
+// }
 
 // 7. Question: Remove all duplicates from an array without built-in methods.
 
-let arrray = [5, 3, 2, 7, 5, 4, 3, 5];
+// let arrray = [5, 3, 2, 7, 5, 4, 3, 5];
 
 
-function newArray(arr) {
-  let lastOccur;
-  let k = 0;
-  let updatedArray = [];
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
-      if (arr[i] == arr[j]) {
-        lastOccur = j;
-      };
-    };
-    if (i == lastOccur) {
-      updatedArray[k] = arr[i];
-      k++;
-    };
-  };
-  return updatedArray;
-}
-document.write(`Question 7: New array is [${newArray(arrray)}]` + "<br>");
+// function newArray(arr) {
+//   let lastOccur;
+//   let k = 0;
+//   let updatedArray = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr.length; j++) {
+//       if (arr[i] == arr[j]) {
+//         lastOccur = j;
+//       };
+//     };
+//     if (i == lastOccur) {
+//       updatedArray[k] = arr[i];
+//       k++;
+//     };
+//   };
+//   return updatedArray;
+// }
+// document.write(`Question 7: New array is [${newArray(arrray)}]` + "<br>");
 
 // Question 8:
 
-let unSortArray = [5, 3, 2, 7, 1, 4, 8, 9];
-let temp;
+// let unSortArray = [5, 3, 2, 7, 1, 4, 8, 9];
+// let temp;
 
-for (let i = 0; i < unSortArray.length; i++) {
-  for (let j = 1 + i; j < unSortArray.length; j++) {
-    if (unSortArray[i] > unSortArray[j]) {
-      temp = unSortArray[i];
-      unSortArray[i] = unSortArray[j]
-      unSortArray[j] = temp
-    }
-  }
-}
-document.write(`Question 8: Sorted array is [${unSortArray}]` + "<br>");
+// for (let i = 0; i < unSortArray.length; i++) {
+//   for (let j = 1 + i; j < unSortArray.length; j++) {
+//     if (unSortArray[i] > unSortArray[j]) {
+//       temp = unSortArray[i];
+//       unSortArray[i] = unSortArray[j]
+//       unSortArray[j] = temp
+//     }
+//   }
+// }
+// document.write(`Question 8: Sorted array is [${unSortArray}]` + "<br>");
 
 
 // 15. Question: Determine if a year is a leap year or not.
@@ -152,27 +152,27 @@ document.write(`Question 8: Sorted array is [${unSortArray}]` + "<br>");
 
 
 
-let result1;
-let score = 10;
-result1 = score >= 80 ? result1 = "pass" : result1 = "fail"
-console.log(result1);
+// let result1;
+// let score = 10;
+// result1 = score >= 80 ? result1 = "pass" : result1 = "fail"
+// console.log(result1);
 
 
 
 // 2. How does the optional chaining operator (?.) work, and how can it be used to access nested properties of an object?
 
 
-var newObj = {
-  name: "Hasnain",
-  id: 21,
-  courses: {
-    course1: "Frontend Development",
-    course2: "Backend Development",
-  }
-}
+// var newObj = {
+//   name: "Hasnain",
+//   id: 21,
+//   courses: {
+//     course1: "Frontend Development",
+//     course2: "Backend Development",
+//   }
+// }
 
 
-console.log(newObj?.name, newObj?.courses?.course2);
+// console.log(newObj?.name, newObj?.courses?.course2);
 
 
 // 3. Compare the for...in loop and the for...of loop in terms of their use cases and the types of values they iterate over.
@@ -191,16 +191,16 @@ console.log(newObj?.name, newObj?.courses?.course2);
 
 
 // 4. Define a function calculateAverage that takes an array of numbers as an argument and returns the average value.
-let arrNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
+// let arrNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-const reduceFunc = (num1, num2) => {
-  return num1 + num2 / arrNumbers.length
-}
+// const reduceFunc = (num1, num2) => {
+//   return num1 + num2 / arrNumbers.length
+// }
 
-let calculateAverage = arrNumbers.reduce(reduceFunc)
-console.log(calculateAverage);
+// let calculateAverage = arrNumbers.reduce(reduceFunc)
+// console.log(calculateAverage);
 
 
 
@@ -308,27 +308,171 @@ console.log(std.calculateAverageFunc());
 
 
 
-// 15. Question: Determine if a year is a leap year or not.
 
-var year = 2024
+// let string1 = [1,2,3,4,5,6,7,8,9,10]
 
-if (year % 4 === 0) {
-  console.log('Yes' + year + ` is a leap year`);
-} else {
-  console.log('No' + `${year} is Not leap year`);
-}
-
+// string1.forEach((item)=>{
+//   return item
+// })
+// const returnVal = item
+// console.log(returnVal);
 
 
-// 1. Rewrite the following code using a ternary operator:
-// let result;
-// if (score >= 80) {
-//     result = "Pass";
-// } else {
-//     result = "Fail";
+
+
+
+// assignment 7 start
+
+
+
+// 1. *Map Transformation:*
+//    - Q: Given an array of integers, use the map method to square each element and return a new array with the squared values.
+
+
+// let num = [1,2,3,4,5,6,7,8,9,10]
+
+// let numSqu = num.map((item) => item * 2)
+// console.log(numSqu);
+
+
+// 2. *Filter and Map Combination:*
+//    - Q: Take an array of strings, filter out the ones with a length less than 5, and then capitalize the remaining strings using the map method.
+
+
+// let nameArr = ["hasnain", "jhanzaib", "anas", "ali"]
+
+// let nameFilt = nameArr.filter((item)=>{
+//   return item.length > 5
+// })
+
+// let nameCap = nameFilt.map((item)=> item.toUpperCase())
+// console.log(nameCap);
+
+
+// 3. *Sorting Objects:*
+//    - Q: Given an array of objects with a 'price' property, use the sort method to arrange them in descending order based on their prices.
+
+
+// let prices = [
+//   {
+//     wallet: "lether",
+//     price: 500
+//   },
+//   {
+//     wallet: "cow lether",
+//     price: 800
+//   },
+//   {
+//     wallet: "pure lether",
+//     price: 1200
+//   },
+//   {
+//     wallet: "local lether",
+//     price: 400
+//   },
+// ]
+
+// prices.sort((a,b)=>{
+//   console.log(a.price, b.price);
+// })
+
+
+
+// 4. *Reduce for Aggregation:*
+//    - Q: Use the reduce method to find the total sum of all even numbers in an array of integers.
+
+
+// let nums = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+
+
+// let allEvenSum = nums.reduce((acc, curr)=>{
+//   if(curr % 2 === 0){
+//     return acc + curr
+//   }
+//   return acc
+// })
+
+// console.log(allEvenSum)
+
+
+// 5. *Find and Modify:*
+//    - Q: Given an array of objects with 'id' properties, use the find method to locate an object with a specific 'id' and update its 'status' property to 'completed'.
+
+
+// let items = [
+//   {
+//     id: 1,
+//     status: "pending"
+//   },
+//   {
+//     id: 2,
+//     status: "pending"
+//   },
+//   {
+//     id: 3,
+//     status: "pending"
+//   },
+//   {
+//     id: 4,
+//     status: "pending"
+//   },
+// ]
+
+
+// const findId = items.find((item)=>{
+//   return item.id === 2
+// })
+
+// if(findId){
+//   findId?.status = "Completed"
+//   console.log(items);
+// }else {
+//   console.log('Object with specified ID not found.');
 // }
 
 
-let marks = 70;
-marks >= 80 ? marks = "pass" : marks = "fail" 
-console.log(marks);
+// 6. *Chaining Methods:*
+//    - Q: Create a chain of array methods to find the average of all positive numbers in an array of mixed integers and return the result rounded to two decimal places.
+
+
+// 7. *Conditional Filtering:*
+//    - Q: Implement a function that takes an array of objects with 'age' properties and returns an array of those who are adults (age 18 and above) using the filter method.
+
+
+// const filAge = [
+//   {
+//     name: "Hasnain",
+//     age: 21
+//   },
+//   {
+//     name: "Jhanzaib",
+//     age: 17
+//   },
+//   {
+//     name: "Daniyal",
+//     age: 12
+//   },
+//   {
+//     name: "Anas",
+//     age: 27
+//   },
+//   {
+//     name: "Ahsan",
+//     age: 15
+//   },
+// ]
+
+
+// const filteredAge = filAge.filter((item)=>{
+//   return item.age < 18
+// })
+// console.log(filteredAge);
+
+
+
+// 8. *Advanced Sorting:*
+//    - Q: Sort an array of strings based on their lengths in ascending order. If two strings have the same length, maintain their relative order in the sorted array.
+
+
+
+
